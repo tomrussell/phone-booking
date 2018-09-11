@@ -1,23 +1,25 @@
 import React from 'react';
 import injectSheet from 'react-jss';
 
+import MetaDataValue from './MetaDataValue';
+
 const MetaData = ({ classes, data }) => (
   <div className={classes.root}>
     <div className={classes.section}>
       <h6>Technology</h6>
-      <span>{data.technology}</span>
+      <MetaDataValue value={data.technology} />
     </div>
     <div className={classes.section}>
       <h6>2G Bands</h6>
-      <span>{data.twoGBands}</span>
+      <MetaDataValue value={data.twoGBands} />
     </div>
     <div className={classes.section}>
       <h6>3G Bands</h6>
-      <span>{data.threeGBands}</span>
+      <MetaDataValue value={data.threeGBands} />
     </div>
     <div className={classes.section}>
       <h6>4G Bands</h6>
-      <span>{data.fourGBands}</span>
+      <MetaDataValue value={data.fourGBands} />
     </div>
   </div>
 );
