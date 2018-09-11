@@ -6,7 +6,7 @@ import moment from 'moment';
 const BookedDate = ({ classes, date }) => (
   <div className={classes.root}>
     <h6>Booked On:</h6>
-    <span className={Classes.TEXT_MUTED}>{moment(date).format('LL')}</span>
+    <span className={Classes.TEXT_MUTED}>{moment(date).format('LLL')}</span>
   </div>
 );
 

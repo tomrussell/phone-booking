@@ -6,7 +6,7 @@ import { LoadingResults } from '../../shared';
 import PhonesList from './PhonesList';
 
 const ProjectsPage = () => (
-  <Query query={LIST_PHONES}>
+  <Query query={LIST_PHONES} pollInterval={2000}>
     {
       (({ loading, error, data: { phones } = {} }) => (
         <LoadingResults loading={loading} error={error}>

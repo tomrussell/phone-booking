@@ -6,6 +6,18 @@ Client side code is React, which connects using the Apollo GraphQL client to an 
 
 # Running the application
 
+### Docker
+
+A `docker-compose.yaml` file has been provided to build, package and run the application. It will also handle launching a MongoDB server
+
+```
+$ docker-compose up -d
+```
+
+The application should be available at `http://localhost:4000`
+
+### Development
+
 Running in development mode requires 2 terminal sessions, one to run the client side code, and the second for the API. The app also depends on a MongoDB database running on localhost, this can easily be launched using Docker
 
 ```
@@ -28,13 +40,3 @@ Navigate to the server source folder, install dependencies and run the dev scrip
 $ cd server
 $ yarn && yarn dev
 ```
-
-### Docker
-
-Alternatively a Docker Compose has been provided to build and run the application
-
-```
-$ docker-compose up -d
-```
-
-The application should be available at `http://localhost:4000`
