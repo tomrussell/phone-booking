@@ -1,0 +1,4 @@
+input BookPhoneInput {
+  deviceName: String!
+  user: String!
+}

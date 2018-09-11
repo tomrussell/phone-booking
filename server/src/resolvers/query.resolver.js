@@ -1,5 +1,7 @@
+import Phones from '../models/phones';
+
 export default {
   Query: {
-    hello: (_, args) => `Hello ${args.name || 'World'}!`,
+    phones: () => Phones.find(),
   },
 };

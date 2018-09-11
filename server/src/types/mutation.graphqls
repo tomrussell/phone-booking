@@ -1,0 +1,4 @@
+type Mutation {
+  bookPhone(input: BookPhoneInput): Phone
+  returnPhone(input: BookPhoneInput): Phone
+}

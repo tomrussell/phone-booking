@@ -1,4 +1,5 @@
 import 'babel-polyfill';
+
 import { GraphQLServer } from 'graphql-yoga';
 import express from 'express';
 import path from 'path';
@@ -7,6 +8,12 @@ import logger from './logger';
 
 import typeDefs from './types';
 import resolvers from './resolvers';
+
+import database from './db';
+import seed from './seed';
+
+database.connect()
+  .then(() => seed());
 
 const log = logger('index.js');
 

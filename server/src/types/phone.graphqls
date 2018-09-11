@@ -1,0 +1,10 @@
+type Phone {
+  name: String!
+  technology: String
+  twoGBands: String
+  threeGBands: String
+  fourGBands: String
+  available: Boolean!
+  bookedAt: String
+  bookedBy: String
+}
