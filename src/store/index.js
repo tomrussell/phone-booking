@@ -1,7 +1,5 @@
 import { createStore } from 'redux';
-import { loadUser } from 'redux-oidc';
 
-import userManager from '../oidc/userManager';
 import reducers from './reducers';
 
 export default function configureStore(initialState) {
@@ -13,9 +11,6 @@ export default function configureStore(initialState) {
       store.replaceReducer(nextReducer);
     });
   }
-
-  // Load the user from OIDC
-  loadUser(store, userManager);
 
   return store;
 }

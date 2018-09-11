@@ -1,25 +1,35 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import injectSheet from 'react-jss';
+import { FocusStyleManager } from '@blueprintjs/core';
 
-import Header from './layout/components/Header';
-import routes from './layout/routes';
-import UserAwareRoute from './layout/components/UserAwareRoute';
+import Phones from './pages/phones/PhonesPage';
+
+FocusStyleManager.onlyShowFocusOnTabs();
 
 const App = ({ classes }) => (
   <div className={classes.root}>
-    <Helmet title='Loading...' titleTemplate='%s | Arizona' />
-    <Header />
-    {
-      routes.map(route => <UserAwareRoute key={route.path} {...route} />)
-    }
+    <Helmet title='Loading...' titleTemplate='%s | Test Phone Booking' />
+    <div className={classes.main}>
+      <h1>Test Phone Inventory</h1>
+      <Phones />
+    </div>
   </div>
 );
 
-export default injectSheet(() => ({
-  root: {
-    display: 'flex',
-    flexDirection: 'column',
-    height: '100%',
-  },
-}))(App);
+export default injectSheet(
+  theme => ({
+    root: {
+      display: 'flex',
+      justifyContent: 'center',
+      width: '100%',
+      backgroundColor: theme.background,
+    },
+    main: {
+      width: '800px',
+      padding: '40px 0',
+      display: 'flex',
+      flexDirection: 'column',
+    },
+  })
+)(App);
