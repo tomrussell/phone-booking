@@ -8,24 +8,6 @@ Client side code is React, which connects using the Apollo GraphQL client to an 
 
 Alternatively a Docker Compose and Dockerfile have been provided to bundle the application
 
-1 - Install NPM dependencies inside this folder and `server`
-
-```
-$ yarn
-$ cd server
-$ yarn
-```
-
-2 - Run the build scripts to produce the client/ server production code
-
-```
-$ yarn build
-$ cd server
-$ yarn build
-```
-
-3 - Run docker-compose
-
 ```
 $ docker-compose up -d
 ```
