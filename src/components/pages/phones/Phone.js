@@ -35,7 +35,7 @@ class Phone extends React.Component {
             { !available && <User user={bookedBy} /> }
           </div>
         </div>
-        <div className={classes.body}>
+        <section>
           <Button
             icon={isOpen ? 'chevron-up' : 'chevron-down'}
             text='Details'
@@ -45,7 +45,7 @@ class Phone extends React.Component {
           <Collapse isOpen={isOpen}>
             <MetaData data={metaData} />
           </Collapse>
-        </div>
+        </section>
       </Card>
     );
   }
